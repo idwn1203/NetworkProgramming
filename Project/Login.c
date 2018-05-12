@@ -12,7 +12,7 @@ void login(){
 	puts("-------------------------------------------------");
 
 	while(1){
-		system("clear");
+		//system("clear");
 		printf("Id : ");
 		scanf("%s",name);
 		getchar();
