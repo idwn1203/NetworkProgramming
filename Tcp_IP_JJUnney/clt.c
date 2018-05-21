@@ -20,29 +20,29 @@ int main(int argc,char* argv[]){
 	servName = argv[1];
 	servPort = atoi(argv[2]);
 	string =argv[3];
-	printf("test\n");
+
 	memset(&servAddr,0,sizeof(servAddr));
-
-	printf("test\n");
+	servAddr.sin_family =AF_INET;	
 	inet_pton(AF_INET,servName,&servAddr.sin_addr);
-
-	printf("test\n");
 	servAddr.sin_port = htons(50000);
-	if((s=socket(PF_INET,SOCK_STREAM,0))<0){
+	s = socket(AF_INET,SOCK_STREAM,0);
+
+
+//create socket
+	if(s<0){
 		perror("Error socet craetion fail");
 		exit(1);
 	}
+//connect to the server
 
-	printf("test\n");
 	if(connect(s,(struct sockaddr *)&servAddr,sizeof(servAddr))<0){
 		perror("connection fail");
 		exit(1);
 	}
-
-	printf("test3\n");
+//Data send
 	send(s,string,strlen(string),0);
 
-	printf("test %d \n",s);
+	printf("test5 soc =%d string=%s n=%d \n",s,string,n);
 
 	while((n =recv(s,ptr,maxLen,0))>0){
 	printf("tes1t3\n");
@@ -52,8 +52,10 @@ int main(int argc,char* argv[]){
 	}
 
 	printf("test2\n");
+
+	printf("echo received : %s \n",buffer);
 	buffer[len] ='\0';
-	printf("echo received");
+	printf("echo received : %s \n",buffer);
 	fputs(buffer,stdout);
 	close(s);
 	exit(0);

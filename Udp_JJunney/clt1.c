@@ -24,12 +24,12 @@ int main(int argc,char*argv[]){
         servAddr.sin_family =AF_INET;
         inet_pton(AF_INET,servName,&servAddr.sin_addr);
         servAddr.sin_port =htons(servPort);
-
+	printf("test");
         if((s=socket(PF_INET,SOCK_DGRAM,0))<0){
                 perror("Error:Socket failed!");
                 exit(1);
         }
-
+	printf("test2");
         len = sendto(s,string,strlen (string),0,(struct sockaddr*)&servAddr,sizeof(servAddr));
 	recvfrom(s,buffer,len,0,NULL,NULL);
 	buffer[len]='\0';

@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/s.dir/srv.c.o  -o s -rdynamic 

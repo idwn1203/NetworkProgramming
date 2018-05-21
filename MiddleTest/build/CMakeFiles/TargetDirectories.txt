@@ -1,0 +1,4 @@
+/home/jjunney/vscode/chatting/build/CMakeFiles/rebuild_cache.dir
+/home/jjunney/vscode/chatting/build/CMakeFiles/server.dir
+/home/jjunney/vscode/chatting/build/CMakeFiles/edit_cache.dir
+/home/jjunney/vscode/chatting/build/CMakeFiles/client.dir
