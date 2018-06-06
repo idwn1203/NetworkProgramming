@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/ChatRoom.c
+common.h
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/common.h
+
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/Login.c
+common.h
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/common.h
+
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/WaitRoom.c
+common.h
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/common.h
+
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/common.h
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/main.c
+common.h
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/common.h
+Login.c
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/Login.c
+WaitRoom.c
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/WaitRoom.c
+ChatRoom.c
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/ChatRoom.c
+

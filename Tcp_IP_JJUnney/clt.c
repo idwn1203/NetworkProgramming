@@ -7,9 +7,9 @@ int main(int argc,char* argv[]){
 	int servPort;
 	char *string;
 	int len;
-	int maxLen;
 	char buffer[256+1];
 	char *ptr =buffer;
+	int maxLen=sizeof(buffer);
 	struct sockaddr_in servAddr;
 
 	if(argc !=4){
@@ -40,23 +40,14 @@ int main(int argc,char* argv[]){
 		exit(1);
 	}
 //Data send
-	send(s,string,strlen(string),0);
+	send(s,(void *) string,strlen(string),0);
 
-	printf("test5 soc =%d string=%s n=%d \n",s,string,n);
-
-	while((n =recv(s,ptr,maxLen,0))>0){
-	printf("tes1t3\n");
-		ptr +=n;
-		maxLen -=n;
+	while((n =recv(s,(void*)buffer,maxLen,0))>0){
+	printf("echo:  %s \n",ptr);
+		//ptr +=n;
+		//maxLen -=n;
 		len +=n;
 	}
-
-	printf("test2\n");
-
-	printf("echo received : %s \n",buffer);
-	buffer[len] ='\0';
-	printf("echo received : %s \n",buffer);
-	fputs(buffer,stdout);
 	close(s);
 	exit(0);
 }

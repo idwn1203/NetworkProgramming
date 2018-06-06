@@ -32,29 +32,27 @@ int main(int argc, char **argv){
 		exit(1);
 	}
 	clntAddrlen = sizeof(clntAddr);
-	printf("test1 %d \n", ls1);
-         
+	
 //        s1 = accept(ls1, (struct sockaddr *) &clntAddr, (socklen_t *) &clntAddrlen);
 
 
 	while(1){
                 s1 = accept(ls1,(struct sockaddr *)&clntAddr,(socklen_t *) &clntAddrlen);
-                printf("test2 %d \n",s1);
+               
 		if(s1 <0){
 			perror("Error:: accepting failed");
 			exit(1);
 		}
 
-		while((n=recv(s1,ptr,maxLen,0))>0){		
-			ptr += n;
-			maxLen -=n;
+		while((n=recv(s1,(void*)buffer,maxLen,0))>0){		
+			//ptr += n;
+			//maxLen -=n;
 			len += n;
+               		printf("recv = %s \n", buffer);	
+
+			send(s1,ptr,len,0);
 		}
 
-                printf("recv = %s \n", buffer);
-                buffer[len] = 0;
-                printf("recv = %s \n", buffer);
-		send(s1,buffer,len,0);
 		close(s1);
 	}
 

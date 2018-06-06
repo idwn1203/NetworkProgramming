@@ -43,7 +43,7 @@ void WaitingRoom(){
 	while(1){
 		puts("Choose Menu : ");
 		scanf("%d",&s);
-		system("cls");
+		system("clear");
 		switch(s){
 			case 1:
 				Enter_ChatRoom();

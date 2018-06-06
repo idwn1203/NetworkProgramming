@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/jjunney/vscode/chatting/server.c" "/home/jjunney/vscode/chatting/build/CMakeFiles/server.dir/server.c.o"
+  "/home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/server.c" "/home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles/server.dir/server.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

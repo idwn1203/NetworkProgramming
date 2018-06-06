@@ -36,11 +36,11 @@ void ChatRoom(){
 		switch(s){
 			case 1 :
 				Input();
-				system("cls");
+				system("clear");
 				ChatRoom();
 				break;
 			case 2 :
-				system("cls");
+				system("clear");
 				Previous();
 				break;
 		}

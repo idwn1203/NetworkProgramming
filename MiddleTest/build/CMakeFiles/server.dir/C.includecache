@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/jjunney/vscode/chatting/server.c
+/home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/headerFiles.h
 stdio.h
 -
 stdlib.h
@@ -30,5 +30,15 @@ string.h
 arpa/inet.h
 -
 sys/wait.h
+-
+signal.h
+-
+
+/home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/server.c
+headerFiles.h
+/home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/headerFiles.h
+unistd.h
+-
+fcntl.h
 -
 

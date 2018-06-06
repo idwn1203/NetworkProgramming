@@ -48,24 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jjunney/vscode/chatting
+CMAKE_SOURCE_DIR = /home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jjunney/vscode/chatting/build
+CMAKE_BINARY_DIR = /home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -78,11 +67,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jjunney/vscode/chatting/build/CMakeFiles /home/jjunney/vscode/chatting/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles /home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jjunney/vscode/chatting/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named C_tcp
+
+# Build rule for target.
+C_tcp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 C_tcp
+.PHONY : C_tcp
+
+# fast build rule for target.
+C_tcp/fast:
+	$(MAKE) -f CMakeFiles/C_tcp.dir/build.make CMakeFiles/C_tcp.dir/build
+.PHONY : C_tcp/fast
+
+#=============================================================================
+# Target rules for targets named C_udp
+
+# Build rule for target.
+C_udp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 C_udp
+.PHONY : C_udp
+
+# fast build rule for target.
+C_udp/fast:
+	$(MAKE) -f CMakeFiles/C_udp.dir/build.make CMakeFiles/C_udp.dir/build
+.PHONY : C_udp/fast
+
+#=============================================================================
 # Target rules for targets named server
 
 # Build rule for target.
@@ -123,45 +149,32 @@ server/fast:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
 .PHONY : server/fast
 
-#=============================================================================
-# Target rules for targets named client
+Tcp_client.o: Tcp_client.c.o
 
-# Build rule for target.
-client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 client
-.PHONY : client
-
-# fast build rule for target.
-client/fast:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
-.PHONY : client/fast
-
-client.o: client.c.o
-
-.PHONY : client.o
+.PHONY : Tcp_client.o
 
 # target to build an object file
-client.c.o:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.c.o
-.PHONY : client.c.o
+Tcp_client.c.o:
+	$(MAKE) -f CMakeFiles/C_tcp.dir/build.make CMakeFiles/C_tcp.dir/Tcp_client.c.o
+.PHONY : Tcp_client.c.o
 
-client.i: client.c.i
+Tcp_client.i: Tcp_client.c.i
 
-.PHONY : client.i
+.PHONY : Tcp_client.i
 
 # target to preprocess a source file
-client.c.i:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.c.i
-.PHONY : client.c.i
+Tcp_client.c.i:
+	$(MAKE) -f CMakeFiles/C_tcp.dir/build.make CMakeFiles/C_tcp.dir/Tcp_client.c.i
+.PHONY : Tcp_client.c.i
 
-client.s: client.c.s
+Tcp_client.s: Tcp_client.c.s
 
-.PHONY : client.s
+.PHONY : Tcp_client.s
 
 # target to generate assembly for a file
-client.c.s:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.c.s
-.PHONY : client.c.s
+Tcp_client.c.s:
+	$(MAKE) -f CMakeFiles/C_tcp.dir/build.make CMakeFiles/C_tcp.dir/Tcp_client.c.s
+.PHONY : Tcp_client.c.s
 
 server.o: server.c.o
 
@@ -190,22 +203,53 @@ server.c.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.c.s
 .PHONY : server.c.s
 
+udp_client.o: udp_client.c.o
+
+.PHONY : udp_client.o
+
+# target to build an object file
+udp_client.c.o:
+	$(MAKE) -f CMakeFiles/C_udp.dir/build.make CMakeFiles/C_udp.dir/udp_client.c.o
+.PHONY : udp_client.c.o
+
+udp_client.i: udp_client.c.i
+
+.PHONY : udp_client.i
+
+# target to preprocess a source file
+udp_client.c.i:
+	$(MAKE) -f CMakeFiles/C_udp.dir/build.make CMakeFiles/C_udp.dir/udp_client.c.i
+.PHONY : udp_client.c.i
+
+udp_client.s: udp_client.c.s
+
+.PHONY : udp_client.s
+
+# target to generate assembly for a file
+udp_client.c.s:
+	$(MAKE) -f CMakeFiles/C_udp.dir/build.make CMakeFiles/C_udp.dir/udp_client.c.s
+.PHONY : udp_client.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... server"
 	@echo "... edit_cache"
-	@echo "... client"
-	@echo "... client.o"
-	@echo "... client.i"
-	@echo "... client.s"
+	@echo "... C_tcp"
+	@echo "... C_udp"
+	@echo "... server"
+	@echo "... rebuild_cache"
+	@echo "... Tcp_client.o"
+	@echo "... Tcp_client.i"
+	@echo "... Tcp_client.s"
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"
+	@echo "... udp_client.o"
+	@echo "... udp_client.i"
+	@echo "... udp_client.s"
 .PHONY : help
 
 

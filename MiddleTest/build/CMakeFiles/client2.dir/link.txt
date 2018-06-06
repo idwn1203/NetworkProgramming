@@ -1,0 +1,1 @@
+/usr/bin/cc  -g   CMakeFiles/client2.dir/udp_client.c.o  -o client2 -rdynamic 

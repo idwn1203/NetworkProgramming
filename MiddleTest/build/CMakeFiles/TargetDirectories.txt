@@ -1,4 +1,5 @@
-/home/jjunney/vscode/chatting/build/CMakeFiles/rebuild_cache.dir
-/home/jjunney/vscode/chatting/build/CMakeFiles/server.dir
-/home/jjunney/vscode/chatting/build/CMakeFiles/edit_cache.dir
-/home/jjunney/vscode/chatting/build/CMakeFiles/client.dir
+/home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles/edit_cache.dir
+/home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles/C_tcp.dir
+/home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles/C_udp.dir
+/home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles/server.dir
+/home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles/rebuild_cache.dir

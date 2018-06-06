@@ -54,10 +54,84 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jjunney/vscode/chatting
+CMAKE_SOURCE_DIR = /home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jjunney/vscode/chatting/build
+CMAKE_BINARY_DIR = /home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build
+
+#=============================================================================
+# Target rules for target CMakeFiles/C_tcp.dir
+
+# All Build rule for target.
+CMakeFiles/C_tcp.dir/all:
+	$(MAKE) -f CMakeFiles/C_tcp.dir/build.make CMakeFiles/C_tcp.dir/depend
+	$(MAKE) -f CMakeFiles/C_tcp.dir/build.make CMakeFiles/C_tcp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles --progress-num=1,2 "Built target C_tcp"
+.PHONY : CMakeFiles/C_tcp.dir/all
+
+# Include target in all.
+all: CMakeFiles/C_tcp.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/C_tcp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/C_tcp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles 0
+.PHONY : CMakeFiles/C_tcp.dir/rule
+
+# Convenience name for target.
+C_tcp: CMakeFiles/C_tcp.dir/rule
+
+.PHONY : C_tcp
+
+# clean rule for target.
+CMakeFiles/C_tcp.dir/clean:
+	$(MAKE) -f CMakeFiles/C_tcp.dir/build.make CMakeFiles/C_tcp.dir/clean
+.PHONY : CMakeFiles/C_tcp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/C_tcp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/C_udp.dir
+
+# All Build rule for target.
+CMakeFiles/C_udp.dir/all:
+	$(MAKE) -f CMakeFiles/C_udp.dir/build.make CMakeFiles/C_udp.dir/depend
+	$(MAKE) -f CMakeFiles/C_udp.dir/build.make CMakeFiles/C_udp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles --progress-num=3,4 "Built target C_udp"
+.PHONY : CMakeFiles/C_udp.dir/all
+
+# Include target in all.
+all: CMakeFiles/C_udp.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/C_udp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/C_udp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles 0
+.PHONY : CMakeFiles/C_udp.dir/rule
+
+# Convenience name for target.
+C_udp: CMakeFiles/C_udp.dir/rule
+
+.PHONY : C_udp
+
+# clean rule for target.
+CMakeFiles/C_udp.dir/clean:
+	$(MAKE) -f CMakeFiles/C_udp.dir/build.make CMakeFiles/C_udp.dir/clean
+.PHONY : CMakeFiles/C_udp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/C_udp.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/server.dir
@@ -66,7 +140,7 @@ CMAKE_BINARY_DIR = /home/jjunney/vscode/chatting/build
 CMakeFiles/server.dir/all:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jjunney/vscode/chatting/build/CMakeFiles --progress-num=3,4 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles --progress-num=5,6 "Built target server"
 .PHONY : CMakeFiles/server.dir/all
 
 # Include target in all.
@@ -76,9 +150,9 @@ all: CMakeFiles/server.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jjunney/vscode/chatting/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/server.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jjunney/vscode/chatting/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/build/CMakeFiles 0
 .PHONY : CMakeFiles/server.dir/rule
 
 # Convenience name for target.
@@ -93,43 +167,6 @@ CMakeFiles/server.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/server.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/client.dir
-
-# All Build rule for target.
-CMakeFiles/client.dir/all:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/depend
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jjunney/vscode/chatting/build/CMakeFiles --progress-num=1,2 "Built target client"
-.PHONY : CMakeFiles/client.dir/all
-
-# Include target in all.
-all: CMakeFiles/client.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jjunney/vscode/chatting/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/client.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jjunney/vscode/chatting/build/CMakeFiles 0
-.PHONY : CMakeFiles/client.dir/rule
-
-# Convenience name for target.
-client: CMakeFiles/client.dir/rule
-
-.PHONY : client
-
-# clean rule for target.
-CMakeFiles/client.dir/clean:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/clean
-.PHONY : CMakeFiles/client.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/client.dir/clean
 
 .PHONY : clean
 

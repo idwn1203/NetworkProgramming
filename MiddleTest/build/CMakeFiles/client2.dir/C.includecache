@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/headerFiles.h
+stdio.h
+-
+stdlib.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+netdb.h
+-
+errno.h
+-
+signal.h
+-
+unistd.h
+-
+string.h
+-
+arpa/inet.h
+-
+sys/wait.h
+-
+signal.h
+-
+
+/home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/udp_client.c
+headerFiles.h
+/home/jjunney/Desktop/Git/NetworkProgramming/MiddleTest/headerFiles.h
+
