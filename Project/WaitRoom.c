@@ -53,8 +53,10 @@ int Enter_ChatRoom() {
         perror("fail to connect");
         exit(1);
     }
-    puts("Tcp_Connection Success");
-	//system("clear");
+	puts("Welcome");
+	getchar();
+	getchar();
+	system("clear");
 	ChatRoom();
 }
 

@@ -22,6 +22,9 @@ int main(int argc, char *argv[])
 
     signal(SIGKILL, process_exit);
     char buffer_tcp[BUFFER_SIZE];
+     char data[BUFFER_SIZE][BUFFER_SIZE] = {
+            0,
+        };
     struct sockaddr_in serverAddr;
     struct sockaddr_in clientAddr;
 
@@ -44,7 +47,7 @@ int main(int argc, char *argv[])
         perror("bind fail");
         exit(1);
     }
-                               
+
     if (listen(serverfd, CLIENT_NUM) < 0)
     {
         perror("listen fail");
@@ -53,36 +56,30 @@ int main(int argc, char *argv[])
 
     int clientSize = sizeof(clientAddr);
     clientfd = accept(serverfd, (struct sockaddr *)&clientAddr, (socklen_t *)&clientSize);
-    fcntl(serverfd,F_SETFL,O_NONBLOCK);
+    fcntl(serverfd, F_SETFL, O_NONBLOCK);
 
-
-      if (clientfd < 0)
+    if (clientfd < 0)
     {
         perror("accept fail");
         exit(1);
     }
-
-    // ssize_t nbytes = 0;
-    //int cursor = 0;
-    //server start
+       
+    
     while (1)
     {
-        //tcp start
-        fcntl(clientfd,F_SETFL,O_NONBLOCK);
-        char data[BUFFER_SIZE] = {
-            0,
-        };
-        ssize_t nbytes = recv(clientfd, (void *)buffer_tcp,sizeof(buffer_tcp), MSG_DONTWAIT); //blocking
-  
-       // printf("%d \n %d \n"),nbytes,sizeof(nbytes);
-        memcpy(data, buffer_tcp,sizeof(buffer_tcp));
-            send(clientfd, (void *)data,sizeof(data), MSG_DONTWAIT);
+        
+        ssize_t nbytes = recv(clientfd, (void *)buffer_tcp, sizeof(buffer_tcp), MSG_DONTWAIT); //blocking
+        if (nbytes != 0)
+        {   int i,index=0;
+            // printf("%d \n %d \n"),nbytes,sizeof(nbytes);
+            memcpy(data, buffer_tcp, sizeof(buffer_tcp));
+            index+=1;
+            //for(i=0;i<index+1;i++){
+            send(clientfd, (void *)data, sizeof(data), MSG_DONTWAIT);
+            //}
             printf("Tcp_recv data : %s\n", data);
             nbytes = 0;
-            //tcp end
-        char temp[BUFFER_SIZE] = {
-            0,};
-
+        }
     }
 
     return 0;
