@@ -8,11 +8,7 @@ int main(int argc, char *argv[])
         char *hostName;
         char buffer[BUFFER_SIZE];
         struct sockaddr_in servAddr;
-        /*
-        if(argc !=4){
-                printf ("Error: three arguments are needed!");
-                exit(1);
-        }*/
+   
 
         hostName = argv[1];
         hostPort = atoi(argv[2]);

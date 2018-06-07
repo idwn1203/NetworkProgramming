@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     {
         printf("input : ");
         scanf("%s", buffer);
-        send(serverfd, (void *)buffer, strlen(buffer),MSG_DONTWAIT);
+        send(serverfd, (void *)buffer, strlen(buffer),0);
         printf("after send\n");
 
         char temp[BUFFER_SIZE] = {

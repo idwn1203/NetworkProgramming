@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
     serverfd = socket(AF_INET, SOCK_STREAM, 0);
 
     // udp variable
-    int s;
+    //int s;
     int len;
     char buffer_udp[BUFFER_SIZE];
     struct sockaddr_in servAddr;
@@ -91,8 +91,7 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    printf(" before binf socket +%d \n", s);
-    if (bind(clientfd1, (struct sockaddr *)&servAddr, sizeof(servAddr)) < 0)
+   if (bind(clientfd1, (struct sockaddr *)&servAddr, sizeof(servAddr)) < 0)
     {
         perror("Error:bind failed!");
         exit(1);
@@ -104,6 +103,7 @@ int main(int argc, char *argv[])
     while (1)
     {
         //tcp start
+        fcntl(clientfd,F_SETFL,O_NONBLOCK);
         printf("before tcp_recv\n");
         char data[BUFFER_SIZE] = {
             0,
@@ -112,14 +112,9 @@ int main(int argc, char *argv[])
         printf("after recv\n");
        // printf("%d \n %d \n"),nbytes,sizeof(nbytes);
         memcpy(data, buffer_tcp,sizeof(buffer_tcp));
-        //if (nbytes != 0)
-        //{
-            //data[nbytes+1] = '\0';
+    
             printf("Tcp_recv  buffer: %s\n", buffer_tcp);
             printf("Tcp_recv data : %s\n", data);
-            //data[nbytes+1] = '\0';
-            //nbytes = 0;
-            //data[nbytes];
             send(clientfd, (void *)data,sizeof(data), MSG_DONTWAIT);
     
             printf("testwer data : %s\n", data);
@@ -142,24 +137,7 @@ int main(int argc, char *argv[])
 
         //}
     }
-    /*
-     while(1){
-        ssize_t nbytes = recv(clientfd, (void*)buffer, BUFFER_SIZE, 0);
-        if( nbytes == 0){
-            data[cursor] = '\0';
-            // break;
-            puts(data);
-            cursor = 0;
-        }
-        else {
-            memcpy(data+cursor, buffer, nbytes);
-            cursor = nbytes;
-        }
-        // memcpy(data, buffer, nbytes);
-        // data[nbytes] = '\0';
-        // puts(data);
 
-     }*/
     //tcp_end
     close(clientfd);
     close(serverfd);
