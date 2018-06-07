@@ -51,7 +51,6 @@ int main(int argc, char *argv[])
     servAddr.sin_port = htons(HOST_PORT2);
     servAddr.sin_addr.s_addr = htonl(INADDR_ANY);
 
-    printf("test %d \n", servAddr.sin_port);
 
     //tcp Start
     if (clientfd < 0)
@@ -59,21 +58,18 @@ int main(int argc, char *argv[])
         perror("Listen fail");
         exit(1);
     }
-    printf("testq \n");
 
     if (bind(serverfd, (struct sockaddr *)&serverAddr, sizeof(serverAddr)) < 0)
     {
         perror("bind fail");
         exit(1);
     }
-    printf("test2 \n");
 
     if (listen(serverfd, CLIENT_NUM) < 0)
     {
         perror("listen fail");
         exit(1);
     }
-    printf("before accept\n");
     int clientSize = sizeof(clientAddr);
     clientfd = accept(serverfd, (struct sockaddr *)&clientAddr, (socklen_t *)&clientSize);
     fcntl(serverfd,F_SETFL,O_NONBLOCK);
@@ -96,7 +92,7 @@ int main(int argc, char *argv[])
         perror("Error:bind failed!");
         exit(1);
     }
-    printf(" after binf \n");
+
     // ssize_t nbytes = 0;
     int cursor = 0;
     //server start
@@ -104,35 +100,27 @@ int main(int argc, char *argv[])
     {
         //tcp start
         fcntl(clientfd,F_SETFL,O_NONBLOCK);
-        printf("before tcp_recv\n");
         char data[BUFFER_SIZE] = {
             0,
         };
         ssize_t nbytes = recv(clientfd, (void *)buffer_tcp,sizeof(buffer_tcp), MSG_DONTWAIT); //blocking
-        printf("after recv\n");
+  
        // printf("%d \n %d \n"),nbytes,sizeof(nbytes);
         memcpy(data, buffer_tcp,sizeof(buffer_tcp));
-    
-            printf("Tcp_recv  buffer: %s\n", buffer_tcp);
-            printf("Tcp_recv data : %s\n", data);
             send(clientfd, (void *)data,sizeof(data), MSG_DONTWAIT);
-    
-            printf("testwer data : %s\n", data);
+            printf("Tcp_recv data : %s\n", data);
             nbytes = 0;
             //tcp end
         char temp[BUFFER_SIZE] = {
             0,
         };
         //udp start
-         printf("before udp_send  \n");
        
         len = recvfrom(clientfd1, buffer_udp, sizeof(buffer_udp), MSG_DONTWAIT, (struct sockaddr *)&clntAddr, &clntAddrLen);
-        printf(" aftr udp_recvfrom %s \n",buffer_udp);
         memcpy(temp, buffer_udp, sizeof(buffer_udp));
-         printf(" before udp_send  \n");
-       
+           printf("udp_send data :  %s \n",temp);
         sendto(clientfd1, temp, sizeof(temp), MSG_DONTWAIT, (struct sockaddr *)&clntAddr, sizeof(clntAddr));
-        printf(" afet udp_send  %s \n",temp);
+        printf("udp_send data :  %s \n",temp);
         //udp endz
 
         //}

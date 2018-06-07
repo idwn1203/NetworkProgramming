@@ -35,14 +35,8 @@ int main(int argc, char *argv[])
                 printf("Input : ");
                 scanf("%s", buffer);
                 sendto(hostPort, buffer, sizeof(buffer),MSG_DONTWAIT, (struct sockaddr *)&servAddr, sizeof(servAddr));
-                printf("buffer :%s \n", buffer);
-                printf("before recvfrom\n");
-
                 recvfrom(hostPort, buffer, sizeof(buffer), MSG_DONTWAIT, NULL, NULL);
-                printf("after recvfrom\n");
-
                 memcpy(temp, buffer, sizeof(buffer));
-                printf("temp : %s \n", temp);
                 //buffer[len] = '\0';
                 printf("recv string : %s \n", buffer);
                 //fputs(buffer,stdout);

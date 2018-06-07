@@ -54,19 +54,13 @@ int main(int argc, char *argv[])
         printf("input : ");
         scanf("%s", buffer);
         send(serverfd, (void *)buffer, strlen(buffer),0);
-        printf("after send\n");
-
         char temp[BUFFER_SIZE] = {
             0,
         };
-        printf("before recv\n");
-
-        ssize_t nbytes = recv(serverfd, (void *)buffer,sizeof(buffer), MSG_DONTWAIT);
-        printf("after recv\n");
         memcpy(temp, buffer, sizeof(buffer));
-
+        recv(temp, (void*)temp,sizeof(temp), MSG_DONTWAIT);
         //buffer[nbytes];
-        printf("recsdfv : %s \n", temp);
+        printf("recv : %s \n", temp);
         //nbytes=0;
     }
 
