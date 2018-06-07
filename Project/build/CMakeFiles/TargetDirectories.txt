@@ -1,3 +1,4 @@
 /home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles/rebuild_cache.dir
 /home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles/edit_cache.dir
 /home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles/client.dir
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles/server.dir

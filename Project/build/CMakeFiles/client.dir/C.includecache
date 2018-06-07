@@ -9,6 +9,8 @@
 /home/jjunney/Desktop/Git/NetworkProgramming/Project/ChatRoom.c
 common.h
 /home/jjunney/Desktop/Git/NetworkProgramming/Project/common.h
+headerFiles.h
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/headerFiles.h
 
 /home/jjunney/Desktop/Git/NetworkProgramming/Project/Login.c
 common.h
@@ -17,6 +19,8 @@ common.h
 /home/jjunney/Desktop/Git/NetworkProgramming/Project/WaitRoom.c
 common.h
 /home/jjunney/Desktop/Git/NetworkProgramming/Project/common.h
+headerFiles.h
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/headerFiles.h
 
 /home/jjunney/Desktop/Git/NetworkProgramming/Project/common.h
 stdio.h
@@ -26,13 +30,35 @@ string.h
 stdlib.h
 -
 
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/headerFiles.h
+stdio.h
+-
+stdlib.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+netdb.h
+-
+errno.h
+-
+signal.h
+-
+unistd.h
+-
+string.h
+-
+arpa/inet.h
+-
+sys/wait.h
+-
+signal.h
+-
+
 /home/jjunney/Desktop/Git/NetworkProgramming/Project/main.c
 common.h
 /home/jjunney/Desktop/Git/NetworkProgramming/Project/common.h
-Login.c
-/home/jjunney/Desktop/Git/NetworkProgramming/Project/Login.c
-WaitRoom.c
-/home/jjunney/Desktop/Git/NetworkProgramming/Project/WaitRoom.c
-ChatRoom.c
-/home/jjunney/Desktop/Git/NetworkProgramming/Project/ChatRoom.c
 

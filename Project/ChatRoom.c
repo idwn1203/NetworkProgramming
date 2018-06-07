@@ -1,49 +1,53 @@
 #include "common.h"
-
+#include "headerFiles.h"
 extern void WaitingRoom();
 extern char name[5];
+extern int serverfd;
 int a;
 
-void Input(){
-	printf("Input : ");
-	scanf("%d",&a);
+char buffer[256];
+void Input()
+{
+
+		puts("-------------------------------------------------");
+	puts("input : ");
+	scanf("%s", buffer);
+	if (buffer == "q")
+	{
+		WaitingRoom();
+	}
+	send(serverfd, (void *)buffer, strlen(buffer), 0);
 	getchar();
 }
+void text()
+{
+	char temp[256] = {
+		0,
+	};
+	memcpy(temp, buffer, sizeof(buffer));
+	recv(temp, (void *)temp, sizeof(temp), MSG_DONTWAIT);
+	//buffer[nbytes];
+	printf("recv : %s \n", temp);
+	//getchar();
+}
 
-void Previous(){
-	WaitingRoom();
-}
-void ChatRoom_Menu(){
-	puts("-------------------------------------------------");
-	puts("1.Input | 2.Previous");
-	puts("-------------------------------------------------");
-}
-void Chat(){
-	printf("name : %s \n",name);
+void User_Name()
+{
+	printf("name : %s \n", name);
 }
 
-void ChatRoom(){
-	int s;
-	puts("-------------------------------------------------");
-	printf("Total : %d \nNow : %d \n",1,2);
-	puts("-------------------------------------------------");
-	Chat();
-	puts("----------------------------------------------\n");
-	ChatRoom_Menu();
-	while(1){
-		puts("Choose Menu : ");
-		scanf("%d",&s);
-		switch(s){
-			case 1 :
-				Input();
-				system("clear");
-				ChatRoom();
-				break;
-			case 2 :
-				system("clear");
-				Previous();
-				break;
-		}
+void ChatRoom()
+{
+	while (1)
+	{
+		int s;
+		puts("-------------------------------------------------");
+		printf("Total : %d \nNow : %d \n", 1, 2);
+		puts("-------------------------------------------------");
+		User_Name();
+		puts("-------------------------------------------------");
+		text();
+		Input();
+		system("clear");
 	}
 }
-

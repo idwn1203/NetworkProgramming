@@ -1,10 +1,60 @@
 #include "common.h"
+#include "headerFiles.h"
+
+#define BUFFER_SIZE 256
+int serverfd;
 
 extern void ChatRoom();
 extern void login();
 extern char name[5];
 
-void Enter_ChatRoom() {
+#define BUFFER_SIZE 256
+int serverfd;
+
+int Enter_ChatRoom() {
+	char *hostName;
+    int hostPort;
+    char buffer[BUFFER_SIZE];
+	char test;
+
+    struct sockaddr_in serverAddr;
+	//puts("IP Input :");
+	//scanf("%s",test);
+	//puts("Port Input :");
+	//scanf("%s",hostName);
+
+/*
+    //filename hostIP hostPort data
+    if (argc < 3)
+    {
+        puts("Usage: hostIP hostPort data");
+        exit(1);
+    }
+*/
+    //hostName = test;
+    //hostPort = atoi(*hostName);
+   
+    //strcpy(buffer, argv[3]);
+
+    memset(&serverAddr, 0, sizeof(serverAddr));
+    serverAddr.sin_family = AF_INET;
+    inet_pton(AF_INET, "127.0.0.1", &serverAddr.sin_addr);
+    serverAddr.sin_port = htons(50000);
+
+    serverfd = socket(AF_INET, SOCK_STREAM, 0);
+    if (serverfd < 0)
+    {
+        perror("fail to create socket");
+        exit(1);
+    }
+
+    if (connect(serverfd, (struct sockaddr *)&serverAddr, sizeof(serverAddr)) < 0)
+    {
+        perror("fail to connect");
+        exit(1);
+    }
+    puts("Tcp_Connection Success");
+	//system("clear");
 	ChatRoom();
 }
 
@@ -15,7 +65,10 @@ void Create_ChatRoom(){
 
 void Delete_ChatRoom(){
 	printf("Delete_ChatRoom\n");
+	close (serverfd);
 	getchar();
+	system("clear");
+	WaitingRoom_menu();
 }
 
 void logout(){

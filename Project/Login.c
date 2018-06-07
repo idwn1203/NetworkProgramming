@@ -6,13 +6,13 @@ char name[5];
 
 void login(){
 	char a1[5];
-	char b[5] = "abcd";
+	char b[5] = "a";
 	puts("-------------------------------------------------");
 	puts("Welcome to the  IIC!!");
 	puts("-------------------------------------------------");
 
 	while(1){
-		//system("clear");
+		system("clear");
 		printf("Id : ");
 		scanf("%s",name);
 		getchar();
@@ -28,7 +28,6 @@ void login(){
 			printf("Try Again\n");
 			getchar();
 			getchar();
-			system("cls");
 			login();
 		break;
 	}

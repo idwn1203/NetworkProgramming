@@ -1,7 +1,4 @@
 #include "common.h"
-#include "Login.c"
-#include "WaitRoom.c"
-#include "ChatRoom.c"
 
 
 int main(){
