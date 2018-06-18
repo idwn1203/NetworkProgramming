@@ -2,7 +2,6 @@
 #include "common.h"
 #include <unistd.h>
 #include <fcntl.h>
-
 #define HOST_PORT1 50000
 #define HOST_PORT2 50001
 #define CLIENT_NUM 5
@@ -19,21 +18,25 @@ void process_exit(int sig)
 
 int main(int argc, char *argv[])
 {
-
     signal(SIGKILL, process_exit);
-    char buffer_tcp[BUFFER_SIZE];
-     char data[BUFFER_SIZE][BUFFER_SIZE] = {
-            0,
-        };
+    char data[BUFFER_SIZE] = {
+        0,
+    };
+    char rcv[BUFFER_SIZE] = {
+        0,
+    };
+    char *prcv=rcv;
+    char *pdata=data;
     struct sockaddr_in serverAddr;
     struct sockaddr_in clientAddr;
 
+        int index=0;
     //tcp seatting
     memset(&serverAddr, 0, sizeof(serverAddr));
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_addr.s_addr = htonl(INADDR_ANY);
     serverAddr.sin_port = htons(HOST_PORT1);
-    serverfd = socket(AF_INET, SOCK_STREAM, 0);
+    serverfd = socket(PF_INET, SOCK_STREAM, 0);
 
     //tcp Start
     if (clientfd < 0)
@@ -63,23 +66,20 @@ int main(int argc, char *argv[])
         perror("accept fail");
         exit(1);
     }
-       
-    
+
     while (1)
     {
-        
-        ssize_t nbytes = recv(clientfd, (void *)buffer_tcp, sizeof(buffer_tcp), MSG_DONTWAIT); //blocking
-        if (nbytes != 0)
-        {   int i,index=0;
-            // printf("%d \n %d \n"),nbytes,sizeof(nbytes);
-            memcpy(data, buffer_tcp, sizeof(buffer_tcp));
-            index+=1;
-            //for(i=0;i<index+1;i++){
-            send(clientfd, (void *)data, sizeof(data), MSG_DONTWAIT);
-            //}
-            printf("Tcp_recv data : %s\n", data);
-            nbytes = 0;
-        }
+        int check;
+            check=recv(clientfd,prcv,sizeof(rcv), MSG_DONTWAIT); //blocking
+            if(check>0){
+                strcat(data,rcv);
+                index +=strlen(prcv);
+                data[index]= '\n';
+                index ++;
+                printf("sizeof %d strlen %d\n",sizeof(rcv),strlen(prcv));
+                printf("%s\n", data);
+                send(clientfd, data, sizeof(data), MSG_DONTWAIT);
+            }
     }
 
     return 0;

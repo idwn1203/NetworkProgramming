@@ -3,52 +3,36 @@
 extern void WaitingRoom();
 extern char name[5];
 extern int serverfd;
-int a;
 
-char buffer[256][256];
+char output[256];
+char *pOut = output;
+char buffer[256];
+char *pname = name;
+
 void Input()
 {
-
+	char input[256]={0,};
 	puts("-------------------------------------------------");
-	puts("input : ");
+	printf("input : ");
 	scanf("%s", buffer);
-	if (!strcmp(buffer,"exit"))
+	if (!strcmp(input, "exit"))
 	{
-
-		system("clear");
 		WaitingRoom();
 	}
-	send(serverfd, (void *)buffer, strlen(buffer), 0);
-	getchar();
+	strcat(input, name);
+	input[strlen(pname)] = ':';
+	strcat(input, buffer);
+	send(serverfd, input, sizeof(input), 0);
+	buffer[0] = '\0';
 }
-void text()
+void Output()
 {
-	char temp[256][256] = {
-		0,
-	};
-	recv(temp, (void *)temp, sizeof(temp), MSG_DONTWAIT);
-	memcpy(temp, buffer, sizeof(buffer));
-	//buffer[nbytes];
-	printf("%s : %s \n",name, temp);
-	
-	//getchar();
-
-	/*
-	char temp[256][256] = {
-		0,
-	};
-	for(i=0;i<index;i++){
-	recv(temp, (void *)temp, sizeof(temp), MSG_DONTWAIT);
-	memcpy(temp, buffer, sizeof(buffer));
-	//buffer[nbytes];
+	int check;
+	if(check>0){
+	recv(serverfd, pOut, sizeof(output), 0);
+	printf("test %s %c\n",output,output[0]);
 	}
-	for(i=0;i<index;i++){
-		printf("recv : %s \n", temp);
-	}
-	//getchar();
-*/
 }
-
 void User_Name()
 {
 	printf("name : %s \n", name);
@@ -66,7 +50,7 @@ void ChatRoom()
 		puts("-------------------------------------------------");
 		User_Name();
 		puts("-------------------------------------------------");
-		text();
+		Output();
 		Input();
 		system("clear");
 	}

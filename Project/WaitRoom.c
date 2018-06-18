@@ -7,8 +7,6 @@ int serverfd;
 extern void ChatRoom();
 extern void login();
 extern char name[5];
-
-#define BUFFER_SIZE 256
 int serverfd;
 
 int Enter_ChatRoom() {
@@ -23,14 +21,6 @@ int Enter_ChatRoom() {
 	//puts("Port Input :");
 	//scanf("%s",hostName);
 
-/*
-    //filename hostIP hostPort data
-    if (argc < 3)
-    {
-        puts("Usage: hostIP hostPort data");
-        exit(1);
-    }
-*/
     //hostName = test;
     //hostPort = atoi(*hostName);
    
@@ -41,7 +31,7 @@ int Enter_ChatRoom() {
     inet_pton(AF_INET, "127.0.0.1", &serverAddr.sin_addr);
     serverAddr.sin_port = htons(50000);
 
-    serverfd = socket(AF_INET, SOCK_STREAM, 0);
+    serverfd = socket(PF_INET, SOCK_STREAM, 0);
     if (serverfd < 0)
     {
         perror("fail to create socket");

@@ -3,22 +3,28 @@
 extern void WaitingRoom();
 char name[5];
 
-
-void login(){
 	char a1[5];
 	char b[5] = "a";
-	puts("-------------------------------------------------");
-	puts("Welcome to the  IIC!!");
-	puts("-------------------------------------------------");
+void login_menu()
+{
+	puts("1.Create Accout");
+	puts("2.login");
+}
+void Creat_Accout() {}
 
-	while(1){
+
+void login()
+{
+	while (1)
+	{
 		system("clear");
 		printf("Id : ");
-		scanf("%s",name);
+		scanf("%s", name);
 		getchar();
 		printf("Password : ");
-		scanf("%s",a1);
-		if(strcmp(a1,b)==0){
+		scanf("%s", a1);
+		if (strcmp(a1, b) == 0)
+		{
 			printf("Success\n");
 			system("cls");
 			WaitingRoom();
@@ -26,10 +32,20 @@ void login(){
 		}
 		else
 			printf("Try Again\n");
-			getchar();
-			getchar();
-			login();
+		getchar();
+		getchar();
+		login();
 		break;
 	}
+}
+void login_Display()
+{
+
+	puts("-------------------------------------------------");
+	puts("Welcome to the  IIC!!");
+	puts("-------------------------------------------------");
+	login_menu();
+	puts("-------------------------------------------------");
 	puts("---------------");
+	
 }

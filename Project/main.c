@@ -3,7 +3,7 @@
 
 int main(){
 	while(1){
-		login ();
+		login();
 	}
 	return 0;
 }
