@@ -29,8 +29,11 @@ void Output()
 {
 	int check;
 	if(check>0){
-	recv(serverfd, pOut, sizeof(output), 0);
-	printf("test %s %c\n",output,output[0]);
+	recv(serverfd, pOut, sizeof(output), MSG_DONTWAIT);
+	output[strlen(pOut)]='\0';
+	printf("%s\n",output);
+
+
 	}
 }
 void User_Name()

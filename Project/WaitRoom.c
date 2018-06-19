@@ -10,16 +10,19 @@ extern char name[5];
 int serverfd;
 
 int Enter_ChatRoom() {
-	char *hostName;
+	char hostName[256];
+	char *ph_Name=hostName;
     int hostPort;
-    char buffer[BUFFER_SIZE];
+    char hP;
+	char buffer[BUFFER_SIZE];
 	char test;
 
     struct sockaddr_in serverAddr;
-	//puts("IP Input :");
-	//scanf("%s",test);
+	printf("IP Input :");
+	//scanf("%s",hP);
+	//hostPort=atoi(hP);
 	//puts("Port Input :");
-	//scanf("%s",hostName);
+	scanf("%s",ph_Name);
 
     //hostName = test;
     //hostPort = atoi(*hostName);
@@ -28,7 +31,7 @@ int Enter_ChatRoom() {
 
     memset(&serverAddr, 0, sizeof(serverAddr));
     serverAddr.sin_family = AF_INET;
-    inet_pton(AF_INET, "127.0.0.1", &serverAddr.sin_addr);
+    inet_pton(AF_INET,ph_Name, &serverAddr.sin_addr);
     serverAddr.sin_port = htons(50000);
 
     serverfd = socket(PF_INET, SOCK_STREAM, 0);
