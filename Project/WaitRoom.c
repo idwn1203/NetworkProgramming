@@ -12,6 +12,8 @@ int serverfd;
 int Enter_ChatRoom() {
 	char hostName[256];
 	char *ph_Name=hostName;
+	char h_Port[256];
+	char *phPort=h_Port;
     int hostPort;
     char hP;
 	char buffer[BUFFER_SIZE];
@@ -19,20 +21,17 @@ int Enter_ChatRoom() {
 
     struct sockaddr_in serverAddr;
 	printf("IP Input :");
-	//scanf("%s",hP);
-	//hostPort=atoi(hP);
-	//puts("Port Input :");
 	scanf("%s",ph_Name);
 
-    //hostName = test;
-    //hostPort = atoi(*hostName);
+	printf("Port Input :");
+	scanf("%s",phPort);
+    hostPort = atoi(phPort);
    
-    //strcpy(buffer, argv[3]);
 
     memset(&serverAddr, 0, sizeof(serverAddr));
     serverAddr.sin_family = AF_INET;
     inet_pton(AF_INET,ph_Name, &serverAddr.sin_addr);
-    serverAddr.sin_port = htons(50000);
+    serverAddr.sin_port = htons(hostPort);
 
     serverfd = socket(PF_INET, SOCK_STREAM, 0);
     if (serverfd < 0)

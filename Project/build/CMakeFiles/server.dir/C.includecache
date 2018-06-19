@@ -42,7 +42,17 @@ sys/wait.h
 signal.h
 -
 
-/home/jjunney/Desktop/Git/NetworkProgramming/Project/server.c
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/queue.c
+string.h
+-
+queue.h
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/queue.h
+
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/queue.h
+stdint.h
+-
+
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/server2.c
 headerFiles.h
 /home/jjunney/Desktop/Git/NetworkProgramming/Project/headerFiles.h
 common.h
@@ -51,4 +61,8 @@ unistd.h
 -
 fcntl.h
 -
+pthread.h
+-
+queue.h
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/queue.h
 

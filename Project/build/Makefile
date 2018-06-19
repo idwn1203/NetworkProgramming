@@ -244,32 +244,59 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/main.c.s
 .PHONY : main.c.s
 
-server.o: server.c.o
+queue.o: queue.c.o
 
-.PHONY : server.o
+.PHONY : queue.o
 
 # target to build an object file
-server.c.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.c.o
-.PHONY : server.c.o
+queue.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/queue.c.o
+.PHONY : queue.c.o
 
-server.i: server.c.i
+queue.i: queue.c.i
 
-.PHONY : server.i
+.PHONY : queue.i
 
 # target to preprocess a source file
-server.c.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.c.i
-.PHONY : server.c.i
+queue.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/queue.c.i
+.PHONY : queue.c.i
 
-server.s: server.c.s
+queue.s: queue.c.s
 
-.PHONY : server.s
+.PHONY : queue.s
 
 # target to generate assembly for a file
-server.c.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.c.s
-.PHONY : server.c.s
+queue.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/queue.c.s
+.PHONY : queue.c.s
+
+server2.o: server2.c.o
+
+.PHONY : server2.o
+
+# target to build an object file
+server2.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server2.c.o
+.PHONY : server2.c.o
+
+server2.i: server2.c.i
+
+.PHONY : server2.i
+
+# target to preprocess a source file
+server2.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server2.c.i
+.PHONY : server2.c.i
+
+server2.s: server2.c.s
+
+.PHONY : server2.s
+
+# target to generate assembly for a file
+server2.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server2.c.s
+.PHONY : server2.c.s
 
 # Help Target
 help:
@@ -293,9 +320,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... server.o"
-	@echo "... server.i"
-	@echo "... server.s"
+	@echo "... queue.o"
+	@echo "... queue.i"
+	@echo "... queue.s"
+	@echo "... server2.o"
+	@echo "... server2.i"
+	@echo "... server2.s"
 .PHONY : help
 
 

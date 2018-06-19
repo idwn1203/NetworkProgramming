@@ -57,41 +57,67 @@ include CMakeFiles/server.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/server.dir/flags.make
 
-CMakeFiles/server.dir/server.c.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/server.c.o: ../server.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/server.dir/server.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server.c.o   -c /home/jjunney/Desktop/Git/NetworkProgramming/Project/server.c
+CMakeFiles/server.dir/server2.c.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/server2.c.o: ../server2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/server.dir/server2.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server2.c.o   -c /home/jjunney/Desktop/Git/NetworkProgramming/Project/server2.c
 
-CMakeFiles/server.dir/server.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/server.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jjunney/Desktop/Git/NetworkProgramming/Project/server.c > CMakeFiles/server.dir/server.c.i
+CMakeFiles/server.dir/server2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/server2.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jjunney/Desktop/Git/NetworkProgramming/Project/server2.c > CMakeFiles/server.dir/server2.c.i
 
-CMakeFiles/server.dir/server.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/server.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jjunney/Desktop/Git/NetworkProgramming/Project/server.c -o CMakeFiles/server.dir/server.c.s
+CMakeFiles/server.dir/server2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/server2.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jjunney/Desktop/Git/NetworkProgramming/Project/server2.c -o CMakeFiles/server.dir/server2.c.s
 
-CMakeFiles/server.dir/server.c.o.requires:
+CMakeFiles/server.dir/server2.c.o.requires:
 
-.PHONY : CMakeFiles/server.dir/server.c.o.requires
+.PHONY : CMakeFiles/server.dir/server2.c.o.requires
 
-CMakeFiles/server.dir/server.c.o.provides: CMakeFiles/server.dir/server.c.o.requires
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.c.o.provides.build
-.PHONY : CMakeFiles/server.dir/server.c.o.provides
+CMakeFiles/server.dir/server2.c.o.provides: CMakeFiles/server.dir/server2.c.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server2.c.o.provides.build
+.PHONY : CMakeFiles/server.dir/server2.c.o.provides
 
-CMakeFiles/server.dir/server.c.o.provides.build: CMakeFiles/server.dir/server.c.o
+CMakeFiles/server.dir/server2.c.o.provides.build: CMakeFiles/server.dir/server2.c.o
+
+
+CMakeFiles/server.dir/queue.c.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/queue.c.o: ../queue.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/server.dir/queue.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/queue.c.o   -c /home/jjunney/Desktop/Git/NetworkProgramming/Project/queue.c
+
+CMakeFiles/server.dir/queue.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/queue.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jjunney/Desktop/Git/NetworkProgramming/Project/queue.c > CMakeFiles/server.dir/queue.c.i
+
+CMakeFiles/server.dir/queue.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/queue.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jjunney/Desktop/Git/NetworkProgramming/Project/queue.c -o CMakeFiles/server.dir/queue.c.s
+
+CMakeFiles/server.dir/queue.c.o.requires:
+
+.PHONY : CMakeFiles/server.dir/queue.c.o.requires
+
+CMakeFiles/server.dir/queue.c.o.provides: CMakeFiles/server.dir/queue.c.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/queue.c.o.provides.build
+.PHONY : CMakeFiles/server.dir/queue.c.o.provides
+
+CMakeFiles/server.dir/queue.c.o.provides.build: CMakeFiles/server.dir/queue.c.o
 
 
 # Object files for target server
 server_OBJECTS = \
-"CMakeFiles/server.dir/server.c.o"
+"CMakeFiles/server.dir/server2.c.o" \
+"CMakeFiles/server.dir/queue.c.o"
 
 # External object files for target server
 server_EXTERNAL_OBJECTS =
 
-server: CMakeFiles/server.dir/server.c.o
+server: CMakeFiles/server.dir/server2.c.o
+server: CMakeFiles/server.dir/queue.c.o
 server: CMakeFiles/server.dir/build.make
 server: CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -99,7 +125,8 @@ CMakeFiles/server.dir/build: server
 
 .PHONY : CMakeFiles/server.dir/build
 
-CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server.c.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server2.c.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/queue.c.o.requires
 
 .PHONY : CMakeFiles/server.dir/requires
 
