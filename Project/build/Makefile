@@ -163,6 +163,33 @@ ChatRoom.c.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/ChatRoom.c.s
 .PHONY : ChatRoom.c.s
 
+Connection.o: Connection.c.o
+
+.PHONY : Connection.o
+
+# target to build an object file
+Connection.c.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/Connection.c.o
+.PHONY : Connection.c.o
+
+Connection.i: Connection.c.i
+
+.PHONY : Connection.i
+
+# target to preprocess a source file
+Connection.c.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/Connection.c.i
+.PHONY : Connection.c.i
+
+Connection.s: Connection.c.s
+
+.PHONY : Connection.s
+
+# target to generate assembly for a file
+Connection.c.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/Connection.c.s
+.PHONY : Connection.c.s
+
 Login.o: Login.c.o
 
 .PHONY : Login.o
@@ -189,33 +216,6 @@ Login.s: Login.c.s
 Login.c.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/Login.c.s
 .PHONY : Login.c.s
-
-WaitRoom.o: WaitRoom.c.o
-
-.PHONY : WaitRoom.o
-
-# target to build an object file
-WaitRoom.c.o:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/WaitRoom.c.o
-.PHONY : WaitRoom.c.o
-
-WaitRoom.i: WaitRoom.c.i
-
-.PHONY : WaitRoom.i
-
-# target to preprocess a source file
-WaitRoom.c.i:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/WaitRoom.c.i
-.PHONY : WaitRoom.c.i
-
-WaitRoom.s: WaitRoom.c.s
-
-.PHONY : WaitRoom.s
-
-# target to generate assembly for a file
-WaitRoom.c.s:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/WaitRoom.c.s
-.PHONY : WaitRoom.c.s
 
 main.o: main.c.o
 
@@ -311,12 +311,12 @@ help:
 	@echo "... ChatRoom.o"
 	@echo "... ChatRoom.i"
 	@echo "... ChatRoom.s"
+	@echo "... Connection.o"
+	@echo "... Connection.i"
+	@echo "... Connection.s"
 	@echo "... Login.o"
 	@echo "... Login.i"
 	@echo "... Login.s"
-	@echo "... WaitRoom.o"
-	@echo "... WaitRoom.i"
-	@echo "... WaitRoom.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

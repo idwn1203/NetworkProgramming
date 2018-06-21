@@ -1,5 +1,5 @@
 set(CMAKE_BUILD_TYPE Debug)
 add_executable(server server2.c queue.c)
-add_executable(client Login.c ChatRoom.c main.c WaitRoom.c)
+add_executable(client Connection.c Login.c ChatRoom.c main.c)
 #add_executable(server server.c)
 target_link_libraries(server pthread)

@@ -12,15 +12,15 @@ common.h
 headerFiles.h
 /home/jjunney/Desktop/Git/NetworkProgramming/Project/headerFiles.h
 
-/home/jjunney/Desktop/Git/NetworkProgramming/Project/Login.c
-common.h
-/home/jjunney/Desktop/Git/NetworkProgramming/Project/common.h
-
-/home/jjunney/Desktop/Git/NetworkProgramming/Project/WaitRoom.c
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/Connection.c
 common.h
 /home/jjunney/Desktop/Git/NetworkProgramming/Project/common.h
 headerFiles.h
 /home/jjunney/Desktop/Git/NetworkProgramming/Project/headerFiles.h
+
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/Login.c
+common.h
+/home/jjunney/Desktop/Git/NetworkProgramming/Project/common.h
 
 /home/jjunney/Desktop/Git/NetworkProgramming/Project/common.h
 stdio.h

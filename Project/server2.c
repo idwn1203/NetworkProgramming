@@ -107,6 +107,7 @@ void* recvMain(void* arg){
             index++;
            // printf("sizeof %d strlen %d\n", sizeof(data), strlen(prcv));
             printf("%s", data);
+            puts("-----------------------");
             send(clientfd, data, 256, MSG_DONTWAIT);
         }
         }

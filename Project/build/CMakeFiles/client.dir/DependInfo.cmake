@@ -5,8 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/jjunney/Desktop/Git/NetworkProgramming/Project/ChatRoom.c" "/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles/client.dir/ChatRoom.c.o"
+  "/home/jjunney/Desktop/Git/NetworkProgramming/Project/Connection.c" "/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles/client.dir/Connection.c.o"
   "/home/jjunney/Desktop/Git/NetworkProgramming/Project/Login.c" "/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles/client.dir/Login.c.o"
-  "/home/jjunney/Desktop/Git/NetworkProgramming/Project/WaitRoom.c" "/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles/client.dir/WaitRoom.c.o"
   "/home/jjunney/Desktop/Git/NetworkProgramming/Project/main.c" "/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles/client.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

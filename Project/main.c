@@ -3,7 +3,8 @@
 
 int main(){
 	while(1){
-		login();
+		First_Display();
+    	Connection();
 	}
 	return 0;
 }

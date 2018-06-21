@@ -1,1 +1,1 @@
-/usr/bin/cc  -g   CMakeFiles/client.dir/Login.c.o CMakeFiles/client.dir/ChatRoom.c.o CMakeFiles/client.dir/main.c.o CMakeFiles/client.dir/WaitRoom.c.o  -o client -rdynamic 
+/usr/bin/cc  -g   CMakeFiles/client.dir/Connection.c.o CMakeFiles/client.dir/Login.c.o CMakeFiles/client.dir/ChatRoom.c.o CMakeFiles/client.dir/main.c.o  -o client -rdynamic 

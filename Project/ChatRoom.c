@@ -17,7 +17,7 @@ void Input()
 	scanf("%s", buffer);
 	if (!strcmp(input, "exit"))
 	{
-		WaitingRoom();
+		return 0;
 	}
 	strcat(input, name);
 	input[strlen(pname)] = ':';
@@ -32,8 +32,6 @@ void Output()
 	recv(serverfd, pOut, sizeof(output), MSG_DONTWAIT);
 	output[strlen(pOut)]='\0';
 	printf("%s\n",output);
-
-
 	}
 }
 void User_Name()

@@ -57,9 +57,33 @@ include CMakeFiles/client.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/client.dir/flags.make
 
+CMakeFiles/client.dir/Connection.c.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/Connection.c.o: ../Connection.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/client.dir/Connection.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/client.dir/Connection.c.o   -c /home/jjunney/Desktop/Git/NetworkProgramming/Project/Connection.c
+
+CMakeFiles/client.dir/Connection.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/client.dir/Connection.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jjunney/Desktop/Git/NetworkProgramming/Project/Connection.c > CMakeFiles/client.dir/Connection.c.i
+
+CMakeFiles/client.dir/Connection.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/client.dir/Connection.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jjunney/Desktop/Git/NetworkProgramming/Project/Connection.c -o CMakeFiles/client.dir/Connection.c.s
+
+CMakeFiles/client.dir/Connection.c.o.requires:
+
+.PHONY : CMakeFiles/client.dir/Connection.c.o.requires
+
+CMakeFiles/client.dir/Connection.c.o.provides: CMakeFiles/client.dir/Connection.c.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/Connection.c.o.provides.build
+.PHONY : CMakeFiles/client.dir/Connection.c.o.provides
+
+CMakeFiles/client.dir/Connection.c.o.provides.build: CMakeFiles/client.dir/Connection.c.o
+
+
 CMakeFiles/client.dir/Login.c.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/Login.c.o: ../Login.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/client.dir/Login.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/client.dir/Login.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/client.dir/Login.c.o   -c /home/jjunney/Desktop/Git/NetworkProgramming/Project/Login.c
 
 CMakeFiles/client.dir/Login.c.i: cmake_force
@@ -83,7 +107,7 @@ CMakeFiles/client.dir/Login.c.o.provides.build: CMakeFiles/client.dir/Login.c.o
 
 CMakeFiles/client.dir/ChatRoom.c.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/ChatRoom.c.o: ../ChatRoom.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/client.dir/ChatRoom.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/client.dir/ChatRoom.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/client.dir/ChatRoom.c.o   -c /home/jjunney/Desktop/Git/NetworkProgramming/Project/ChatRoom.c
 
 CMakeFiles/client.dir/ChatRoom.c.i: cmake_force
@@ -107,7 +131,7 @@ CMakeFiles/client.dir/ChatRoom.c.o.provides.build: CMakeFiles/client.dir/ChatRoo
 
 CMakeFiles/client.dir/main.c.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/client.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/client.dir/main.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/client.dir/main.c.o   -c /home/jjunney/Desktop/Git/NetworkProgramming/Project/main.c
 
 CMakeFiles/client.dir/main.c.i: cmake_force
@@ -129,44 +153,20 @@ CMakeFiles/client.dir/main.c.o.provides: CMakeFiles/client.dir/main.c.o.requires
 CMakeFiles/client.dir/main.c.o.provides.build: CMakeFiles/client.dir/main.c.o
 
 
-CMakeFiles/client.dir/WaitRoom.c.o: CMakeFiles/client.dir/flags.make
-CMakeFiles/client.dir/WaitRoom.c.o: ../WaitRoom.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/client.dir/WaitRoom.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/client.dir/WaitRoom.c.o   -c /home/jjunney/Desktop/Git/NetworkProgramming/Project/WaitRoom.c
-
-CMakeFiles/client.dir/WaitRoom.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/client.dir/WaitRoom.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jjunney/Desktop/Git/NetworkProgramming/Project/WaitRoom.c > CMakeFiles/client.dir/WaitRoom.c.i
-
-CMakeFiles/client.dir/WaitRoom.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/client.dir/WaitRoom.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jjunney/Desktop/Git/NetworkProgramming/Project/WaitRoom.c -o CMakeFiles/client.dir/WaitRoom.c.s
-
-CMakeFiles/client.dir/WaitRoom.c.o.requires:
-
-.PHONY : CMakeFiles/client.dir/WaitRoom.c.o.requires
-
-CMakeFiles/client.dir/WaitRoom.c.o.provides: CMakeFiles/client.dir/WaitRoom.c.o.requires
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/WaitRoom.c.o.provides.build
-.PHONY : CMakeFiles/client.dir/WaitRoom.c.o.provides
-
-CMakeFiles/client.dir/WaitRoom.c.o.provides.build: CMakeFiles/client.dir/WaitRoom.c.o
-
-
 # Object files for target client
 client_OBJECTS = \
+"CMakeFiles/client.dir/Connection.c.o" \
 "CMakeFiles/client.dir/Login.c.o" \
 "CMakeFiles/client.dir/ChatRoom.c.o" \
-"CMakeFiles/client.dir/main.c.o" \
-"CMakeFiles/client.dir/WaitRoom.c.o"
+"CMakeFiles/client.dir/main.c.o"
 
 # External object files for target client
 client_EXTERNAL_OBJECTS =
 
+client: CMakeFiles/client.dir/Connection.c.o
 client: CMakeFiles/client.dir/Login.c.o
 client: CMakeFiles/client.dir/ChatRoom.c.o
 client: CMakeFiles/client.dir/main.c.o
-client: CMakeFiles/client.dir/WaitRoom.c.o
 client: CMakeFiles/client.dir/build.make
 client: CMakeFiles/client.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jjunney/Desktop/Git/NetworkProgramming/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable client"
@@ -177,10 +177,10 @@ CMakeFiles/client.dir/build: client
 
 .PHONY : CMakeFiles/client.dir/build
 
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/Connection.c.o.requires
 CMakeFiles/client.dir/requires: CMakeFiles/client.dir/Login.c.o.requires
 CMakeFiles/client.dir/requires: CMakeFiles/client.dir/ChatRoom.c.o.requires
 CMakeFiles/client.dir/requires: CMakeFiles/client.dir/main.c.o.requires
-CMakeFiles/client.dir/requires: CMakeFiles/client.dir/WaitRoom.c.o.requires
 
 .PHONY : CMakeFiles/client.dir/requires
 

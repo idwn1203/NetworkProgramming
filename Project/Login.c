@@ -1,23 +1,23 @@
 #include "common.h"
+extern void ChatRoom();
 
-extern void WaitingRoom();
 char name[5];
-
 	char a1[5];
 	char b[5] = "a";
 void login_menu()
 {
-	puts("1.Create Accout");
-	puts("2.login");
+	// Later..
+	// puts("1.Create Accout");
+	// puts("2.Login");
+	// puts("3.Delete Accout");
+	puts("Login....");
 }
-void Creat_Accout() {}
-
-
-void login()
+void Login()
 {
 	while (1)
 	{
 		system("clear");
+		Login_Display();
 		printf("Id : ");
 		scanf("%s", name);
 		getchar();
@@ -26,26 +26,23 @@ void login()
 		if (strcmp(a1, b) == 0)
 		{
 			printf("Success\n");
-			system("cls");
-			WaitingRoom();
+			system("clear");
+			ChatRoom();
 			break;
 		}
 		else
 			printf("Try Again\n");
 		getchar();
 		getchar();
-		login();
+		Login();
 		break;
 	}
 }
-void login_Display()
+void Login_Display()
 {
-
 	puts("-------------------------------------------------");
 	puts("Welcome to the  IIC!!");
 	puts("-------------------------------------------------");
 	login_menu();
 	puts("-------------------------------------------------");
-	puts("---------------");
-	
 }
